@@ -1,0 +1,8 @@
+/target/
+build-docker.sh
+.gitignore
+.gitmodules
+README
+/jenkins/
+Dockerfile
+docker-compose.yaml

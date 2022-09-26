@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: test
+    ports:
+      - 3306:3306
+    networks:
+      - database_network
+
+  adminer:
+    build: .
+    restart: unless-stopped
+    networks:
+      - database_network
+
+networks:
+  database_network:
