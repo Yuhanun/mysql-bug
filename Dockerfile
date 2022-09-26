@@ -13,5 +13,5 @@ WORKDIR /app
 COPY ./src /app/src
 RUN cargo build --release
 
-
+ENV RUST_BACKTRACE full
 ENTRYPOINT [ "/app/target/release/mre" ]

@@ -3,7 +3,7 @@ services:
   db:
     image: mysql
     environment:
-      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
       MYSQL_DATABASE: test
     ports:
       - 3306:3306
@@ -11,6 +11,8 @@ services:
       - database_network
 
   adminer:
+    depends_on: 
+      - db
     build: .
     restart: unless-stopped
     networks:
