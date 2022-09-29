@@ -1,3 +1,3 @@
 # mysql-bug
 
-This is a fix for a mysql bug.
+This is a MRE for a mysql bug.
